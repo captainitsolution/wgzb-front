@@ -1,23 +1,38 @@
 <footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="images/wgzb-logo-footer.png" alt="WGBZ Advogadas Associadas" class="logo-img">
-            </div>
-            <div class="footer-info">
-            </div>
-            <div class="footer-social">
-                <a href="https://www.instagram.com/wgbzadvogadas/" target="_blank" rel="noopener noreferrer"
-                    class="social-btn">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-                <a href="#" class="social-btn">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 WGBZ Advogadas. Todos os direitos reservados.</p>
-        </div>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <!--
+          SUGESTÃO: O caminho da imagem foi ajustado para a pasta 'assets',
+          que é o local padrão para arquivos estáticos no Angular.
+          Certifique-se de que a imagem esteja em 'src/assets/images/'.
+        -->
+        <img ngSrc="images/wgzb-logo-footer.png" alt="WGBZ Advogadas Associadas" class="logo-img" width="150" height="68">
+      </div>
+      <div class="footer-info">
+        <!--
+          CORREÇÃO: O caractere '@' foi substituído por sua entidade HTML '&#64;'
+          para evitar conflito com a sintaxe do Angular e corrigir o erro de build.
+        -->
+        <p>Contato: contato&#64;wgzb.com.br</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/wgbzadvogadas/" target="_blank" rel="noopener noreferrer"
+           class="social-btn">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <!-- SUGESTÃO: Não se esqueça de adicionar o link do seu LinkedIn aqui -->
+        <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <!--
+        SUGESTÃO: O ano agora é dinâmico e será atualizado automaticamente
+        a cada virada de ano, usando a variável 'currentYear' do componente.
+      -->
+      <p>&copy; {{ currentYear }} WGBZ Advogadas. Todos os direitos reservados.</p>
+    </div>
+  </div>
 </footer>
