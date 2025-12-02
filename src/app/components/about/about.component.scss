@@ -1,0 +1,69 @@
+.about {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+    color: var(--color-text-dark);
+
+    .section-title {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        color: var(--color-primary);
+
+        @media (max-width: 768px) {
+            font-size: 2rem;
+            /* Reduce font size on mobile */
+        }
+    }
+
+    .about-description {
+        max-width: 800px;
+        margin: 0 auto 4rem;
+        text-align: center;
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--color-text-dark);
+        }
+    }
+
+    .partners-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        /* Reduced min-width to fit 4 items */
+        gap: 4rem;
+        /* Increased spacing between partner cards */
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            /* Stack vertically on mobile */
+            gap: 3rem;
+        }
+
+        .partner-card {
+            text-align: center;
+
+            .partner-image {
+                width: 280px;
+                height: 350px;
+                background-color: #ddd;
+                margin: 0 auto 1rem;
+                /* Center image */
+                border-radius: 4px;
+                object-fit: cover;
+                display: block;
+            }
+
+            .partner-name {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+                color: var(--color-primary);
+            }
+
+            .partner-role {
+                font-family: var(--font-sans);
+                color: #666;
+            }
+        }
+    }
+}

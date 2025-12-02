@@ -1,0 +1,52 @@
+.header {
+    padding: 1.5rem 0;
+    position: relative;
+    z-index: 100;
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        /* Center items */
+        align-items: center;
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        gap: 12rem;
+        /* Reduced from 18rem to prevent wrapping */
+
+        .nav-item {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            /* Increased font size */
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #E0C090;
+            cursor: pointer;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    /* Tablet / Intermediate screens */
+    @media (max-width: 1400px) {
+        .nav {
+            gap: 5rem;
+            /* Reduce gap to prevent overflow/zoom on tablets */
+        }
+    }
+
+    /* Mobile screens */
+    @media (max-width: 768px) {
+        .nav {
+            gap: 1rem;
+            /* Small gap on mobile */
+
+            .nav-item {
+                font-size: 0.8rem;
+                /* Slightly smaller font on mobile */
+            }
+        }
+    }
+}
